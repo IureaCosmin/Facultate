@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Prima aplicație web</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="titlu">Prima aplicație web</div>
+        <div id="descriere">Aplicația preia nota unui student și o salvează într-o bază de date pe server.</div>
+        <form id="formular">
+		    <div id="nstudent">Numele studentului</div>
+		    <div><input type="text" id="nume" name="nume" onkeyup="verNume()" /></div>
+			<div><span id="mesaj" style="visibility: hidden;color:red">Numele trebuie sa contina minim 3 caractere</span></div>
+			<div id="nr">Numar telefon</div>
+			<div><input type="text" id="telefon" name="telefon" onkeyup="" /></div>
+			<div id="sistem">Sistem notare</div>
+			<div><select id="sistemnotare" size=3>
+			<option value="roman">Roman</option>
+			<option value="grecesc">Grecesc</option>
+			<option value="rusesc">Rusesc</option>
+			</select></div>
+			<div id="nnota">Nota</div>
+            <div><input type="text" id="nota" name="nota" onkeydown="curataNota()" /></div>
+            <div><input type="submit" id="trimite" value="Trimite" onclick="return verificaNota() && verSistem()"/></div>
+            <input type="reset" id="reseteaza" value="Resetează" />
+        </form>
+        <script src="script.js"></script>
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

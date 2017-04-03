@@ -1,0 +1,74 @@
+
+body{
+    border-color:darkcyan;
+    border-style:solid;
+    border-width: 10px;
+    width:200px;
+}
+#titlu{
+    font-family: Arial;
+    font-weight:bold;
+    font-size:22pt;
+    color:#ffffff;
+    background-color:darkcyan;
+    text-align :center;
+    padding:5px;
+}
+#descriere{
+    text-align:center;
+    color:mediumvioletred;
+    font-style:italic;
+    font-size:10pt;
+    padding:5px;
+}
+#formular{
+    background-color:goldenrod;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#nota{
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}
+#telefon{
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}
+#sistemnotare{
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}
+#nume{
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}
+#nstudent{
+    text-align :center;
+}
+#nnota{
+    text-align :center;
+}
+#nr{
+    text-align :center;
+}
+#mesaj{
+    text-align :center;
+}
+#sistem{
+    text-align :center;
+}
+#trimite{
+    color:blue;
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}
+#reseteaza{
+    width:100px;
+    margin:5px;
+    margin-left:50px;
+}

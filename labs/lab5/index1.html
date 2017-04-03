@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <title>Informatii jucator</title>
+</head>
+<body>
+<form>
+    <div class="form-style-5">
+        <h1>Informatii jucator</h1>
+        <ul style="list-style: none">
+            <fieldset>
+                <!--info general-->
+                <li>
+                    <label  class="message" id="message" ></label>
+                    <label for="name">Nume <abbr title="required">:</abbr></label>
+                    <input onchange="verificaredimensiune()" type="text" id="name" name="name" placeholder="Numele"/>
+                </li>
+                <li>
+                    <label for="name">Prenume <abbr title="required">:</abbr></label>
+                    <input onchange="verificaredimensiune2()" type="text" id="prenume" name="name" placeholder="prenumele"/>
+                </li>
+                <li>
+                    <label for="name">Data nasterei <abbr title="required">:</abbr></label>
+                    <input onchange="checkdate()" type="date" id="dnastere" name="dnastere"
+                           placeholder="Data nasterei"/>
+                </li>
+                <li>
+                    <label for="name"> Nivel Salarizare <abbr title="required">:</abbr></label>
+                    <input onchange="checksal()" type="number" id="nsalarizare1" name="nsalarizare1"
+                           placeholder="minim"/>
+                    <input onchange="checksal1();vsal()" type="number" id="nsalarizare2" name="nsalarizare2"
+                           placeholder="maxim"/>
+                </li>
+                <label  class="message" id="message2" ></label>
+            </fieldset>
+            <li>
+                <!--posturi jucate-->
+                <fieldset>
+                    <legend>Posturi in care a jucat <abbr title="required"></abbr></legend>
+                    <ul>
+                        <li>
+                            <input checked type="radio" name="pozitie" value="fundas" id="fundas" autofocus/>
+                            <label for="fundas">fundas</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pozitie" value="portar" id="portar"/>
+                            <label for="portar">portar</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pozitie" value="atacant" id="atacant"/>
+                            <label for="atacant">atacant</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pozitie" value="aparator" id="aparator"/>
+                            <label for="aparator">aparator</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+            <!--postpreferat-->
+            <fieldset>
+                <!--1-->
+                <li>
+                    <form id="postpreferat1">
+                    </form>
+                    <label for="postpreferat1"> Post preferat 1 <abbr title="required">:</abbr></label>
+                    <select name="postpreferat1" form="postpreferat1" onchange="sel(this)">
+                        <option value="none">none</option>
+                        <option value="fundas">fundas</option>
+                        <option value="portar">portar</option>
+                        <option value="atacant">atacant</option>
+                        <option value="aparator">aparator</option>
+                    </select>
+                </li>
+                <!--2-->
+                <li>
+                    <form id="postpreferat2">
+                    </form>
+                    <label for="postpreferat2"> Post preferat 2 <abbr title="required">:</abbr></label>
+                    <select name="postpreferat2" form="postpreferat2" onchange="sel(this)">
+                        <option value="none">none</option>
+                        <option value="fundas">fundas</option>
+                        <option value="portar">portar</option>
+                        <option value="atacant">atacant</option>
+                        <option value="aparator">aparator</option>
+                    </select>
+                </li>
+            </fieldset>
+            <!--titular-->
+            <li>
+                <fieldset>
+                    <legend>Titular <abbr title="required"></abbr></legend>
+                    <ul>
+                        <li>
+                            <input type="radio" name="titular" value="tara" id="tara" autofocus/>
+                            <label for="tara">In tara</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="titular" value="strainatate" id="strainatate"/>
+                            <label for="strainatate">In strainatate</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+            <!--alte echipe-->
+
+            <input type="checkbox" id="alte1" name="alte" value="alte">Am jucat la alte echipe<br>
+
+
+            <!--checkboxuri alte echipe-->
+
+            <fieldset style="display: none;" id="echipe">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="Astra" value="Astra"> Astra<br>
+                        <input type="checkbox" name="Dinamo" value="Dinamo"> Dinamo<br>
+                        <input type="checkbox" name="Pandurii" value="Panduri"> Pandurii<br>
+                        <input type="checkbox" name="Viitorul" value="Viitorul"> Viitorul<br>
+                        <input type="checkbox" name="Steaua" value="Steaua"> Steaua<br>
+                        <input type="checkbox" name="ASA" value="AS	"> ASA<br>
+                        <input type="checkbox" name="Iași" value="Iași"> Iași<br>
+                        <input type="checkbox" name="CSU_Craiova" value="CSU Craiova"> CSU Craiova<br>
+                        <input type="checkbox" name="CFR_Cluj" value="CFR Cluj"> CFR Cluj<br>
+                        <input type="checkbox" name="Botoșani" value="Botoșani"> Botoșani<br>
+                        <input type="checkbox" name="Timișoara" value="Timișoara"> Timișoara<br>
+                        <input type="checkbox" name="Voluntari" value="Voluntari"> Voluntari<br>
+                        <input type="checkbox" name="Concordia" value="Concordia"> Concordi<br>
+                        <input type="checkbox" name="Petrolul" value="Petrolul">Petrolul<br>
+                        <input type="checkbox" id="other" name="other" value="other">Altele<br>
+
+                    </li>
+                </ul>
+            </fieldset>
+            <!--textbox altele-->
+            <textarea style="display: none" name="other1" id="other1"
+                      placeholder="La care echipa ati jucat ?" rows="4" maxlength="100"></textarea>
+            <!--calitati-->
+            <li>
+                <label for="calitati">Calitati</label> <br>
+                <textarea name="calitati" id="calitati" placeholder="Calitatile dumneavoastra" rows="4"
+                          maxlength="100"></textarea>
+
+            </li>
+
+        </ul>
+        <input type="submit" value="Salveaza"/>
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
